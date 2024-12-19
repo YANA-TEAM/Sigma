@@ -9,7 +9,7 @@ public class Pq5 {
                 System.out.println(year+" is leap year");
             }
             else{
-                System.out.println(year+" is not year");                
+                System.out.println(year+" is not leap year");                
             }
             sc.close();
         }
