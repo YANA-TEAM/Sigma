@@ -4,7 +4,7 @@ public class Pq5 {
         try(Scanner sc = new Scanner(System.in)){
             System.out.print("Enter Year to Check that it is Leap year or not :");
             int year = sc.nextInt();
-            boolean leap = ((year%4==0)&&(year%100==0)&&(year%100!=0)&&(year%400==0));
+            boolean leap = ((year%4==0)&&(year%100!=0)&&(year%400==0));
             if(leap == true){
                 System.out.println(year+" is leap year");
             }
