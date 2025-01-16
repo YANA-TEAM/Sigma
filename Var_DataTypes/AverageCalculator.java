@@ -4,9 +4,9 @@ public class AverageCalculator{
     public static void main(String[] args) {
         try(Scanner scanner = new Scanner(System.in)){
 
-            int number1 = getValidInput(scanner, "Enter Number 1: ");
-            int number2 = getValidInput(scanner, "Enter Number 2: ");
-            int number3 = getValidInput(scanner, "Enter Number 3: ");
+            double number1 = getValidInput(scanner, "Enter Number 1: ");
+            double number2 = getValidInput(scanner, "Enter Number 2: ");
+            double number3 = getValidInput(scanner, "Enter Number 3: ");
 
             double average = calculateAverage(number1,number2,number3);
             System.out.printf("The average is: %.5f", average);
@@ -24,7 +24,7 @@ public class AverageCalculator{
         return sum/numbers.length;
     }
 
-    private static int getValidInput(Scanner scanner,String prompt){
+    private static double getValidInput(Scanner scanner,String prompt){
         while (true) { 
             System.out.print(prompt);
             if(scanner.hasNextDouble()){
