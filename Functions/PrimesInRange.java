@@ -1,26 +1,28 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class PrimesInRange {
-
-    // Method to check if a number is prime
-    public static boolean checkPrime(int number) {
-        if (number <= 1) return false; // 0 and 1 are not prime numbers
-        if (number == 2) return true; // 2 is a prime number
-        if (number % 2 == 0) return false; // Even numbers greater than 2 are not prime
-
-        for (int counter = 3; counter <= Math.sqrt(number); counter += 2) {
-            if (number % counter == 0) {
-                return false;
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false; // Numbers less than or equal to 1 are not prime
+        }
+        if (number == 2) {
+            return true; // 2 is the only even prime number
+        }
+        if (number % 2 == 0) {
+            return false; // Even numbers greater than 2 are not prime
+        }
+        for (int i = 3; i <= Math.sqrt(number); i += 2) {
+            if (number % i == 0) {
+                return false; // Divisible by other numbers
             }
         }
-        return true;
+        return true; // Number is prime
     }
 
-    // Method to print all primes in the range [1, number]
     public static void primesInRange(int number) {
         for (int i = 2; i <= number; i++) {
-            if (checkPrime(i)) {
-                System.out.println(i);
+            if (isPrime(i)) {
+                System.out.println(i); // Print prime numbers
             }
         }
     }
@@ -28,12 +30,9 @@ public class PrimesInRange {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the upper limit to find prime numbers: ");
-        int num = sc.nextInt();
-
-        System.out.println("All Prime Numbers From 1 to " + num + " are:");
-        primesInRange(num);
-
-        sc.close();
+        System.out.print("Enter a range of prime numbers: ");
+        int range = sc.nextInt();
+        System.out.println("All Prime Numbers from 1 to " + range + " are:");
+        primesInRange(range);
     }
 }
