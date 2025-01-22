@@ -1,31 +1,15 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-public class AreaOfSquare {
-    /**
-     * @param args
-     */
+import java.util.*;
+public class AreaOfSquare{
     public static void main(String[] args) {
-        System.out.println("Choose a version to run:");
-        System.out.println("1. Noob Version");
-        System.out.println("2. Pro Version");
-        System.out.print("Enter your choice (1 or 2): ");
-
-        Scanner scanner = new Scanner(System.in);
-        int choice = scanner.nextInt();
-
-        if (choice == 1) {
-            NoobAreaOfSquare.main(null);
-        } else if (choice == 2) {
-            ProAreaOfSquare.main(null);
-        } else {
-            System.out.println("Invalid choice. Exiting.");
-        }
-
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+         System.out.print("Enter Side of a Square :");
+         double side = sc.nextDouble();
+         double areaOfSquare = (side*side);
+         System.out.println("Area Of Square is :"+areaOfSquare);
+        sc.close();
     }
+<<<<<<< HEAD
+=======
 }
 
 class NoobAreaOfSquare {
@@ -128,4 +112,5 @@ class ProAreaOfSquare {
         System.err.println("An unexpected error occurred. Please try again later.");
         logger.log(Level.SEVERE, "An unexpected error occurred: " + e.getMessage(), e);
     }
+>>>>>>> ba890ff5ab377211c40426e711c28e013e336ccc
 }
