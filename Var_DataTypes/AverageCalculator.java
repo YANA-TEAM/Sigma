@@ -1,39 +1,11 @@
 import java.util.*;
-
 public class AverageCalculator{
     public static void main(String[] args) {
-        try(Scanner scanner = new Scanner(System.in)){
-
-            double number1 = getValidInput(scanner, "Enter Number 1: ");
-            double number2 = getValidInput(scanner, "Enter Number 2: ");
-            double number3 = getValidInput(scanner, "Enter Number 3: ");
-
-            double average = calculateAverage(number1,number2,number3);
-            System.out.printf("The average is: %.5f", average);
-
-        } catch (Exception e) {
-            System.out.println("an error occured" +e.getMessage());
-        }
-    }
-
-    private static double calculateAverage(double... numbers){
-        double sum = 0;
-        for(double number : numbers){
-            sum+=number;
-        }
-        return sum/numbers.length;
-    }
-
-    private static double getValidInput(Scanner scanner,String prompt){
-        while (true) { 
-            System.out.print(prompt);
-            if(scanner.hasNextDouble()){
-                return scanner.nextDouble();
-            }
-            else{
-                System.out.println("!!Invalid Input Please enter Integer!!");
-                scanner.next();
-            }
-        }
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        int average = (num1+num2+num3)/3;
+        System.out.println("Average is :"+average);
     }
 }

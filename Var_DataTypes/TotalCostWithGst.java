@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 public class TotalCostWithGst{
     public static void main(String[] args) {
