@@ -1,5 +1,0 @@
-// sabse pehli baat class ka naam PascalCase ko use karke likhna or class ka naam descriptive rakhna class ka naam hi bata de ki ye code kis liye hai
-// dusri baat agar input lere ho to to inputvalidation bhi lagao matlab agar number input lena hai to agar koi user galat input dla jaise string to apna code usse ek exception throw karna chahiye sahi input dalne ke liye
-// agar hum Scanner ko try ke andar use karte hai to usse sc.close() likhne ki zarurat nhi last me wo close ho hi raha hai
-// or variables ke names meaningful rakhna chahiye or agar kisi number ko hume direct kisi par operation karna hai jaise a+3 to 3 ko kisi constant variable declare kardo direct use mat karo 
-// or jab output finally show karo to System.out.printf() use karo taki formatted output aaye
