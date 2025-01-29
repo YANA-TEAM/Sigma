@@ -1,6 +1,6 @@
 public class BinaryToDecimal {
     public static void main(String[] args){
-        int number = 101;
+        int number = 1010;
         int power = 0;
         int decimal = 0;
         while(number > 0){
