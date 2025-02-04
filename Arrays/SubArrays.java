@@ -1,18 +1,18 @@
 public class SubArrays {
     public static void subArrays(int arr[]){
         int total = 0;
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         for(int i = 0; i <= arr.length-1; i++){
             for(int j = i; j <= arr.length-1; j++){
-                int currentSum = 0;
+                int sum = 0;
                 for(int k = i; k <= j; k++){
                     System.out.print(arr[k]);
-                    currentSum += arr[k];
+                    sum += arr[k];
                 }
                 System.out.println();
-                System.out.println("Sum is :"+currentSum);
-                if(currentSum >= maxSum){
-                    maxSum = currentSum;
+                System.out.println("Sum is :"+sum);
+                if(sum >= maxSum){
+                    maxSum = sum;
                 }
                 total++;
             }
