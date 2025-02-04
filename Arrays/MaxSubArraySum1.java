@@ -1,5 +1,5 @@
-public class MaxSubArraycurrentSum1 {
-    public static void maxSubArraycurrentSum(int arr[]){
+public class MaxSubArraySum1 {
+    public static void maxSubArraySum(int arr[]){
         int maxSum = Integer.MIN_VALUE;
         for(int i = 0; i <= arr.length-1; i++){
             for(int j = i; j <= arr.length-1; j++){
@@ -21,7 +21,7 @@ public class MaxSubArraycurrentSum1 {
     }
     public static void main(String[] args) {
         int arr[] = {1,-2,6,-1,3};
-        maxSubArraycurrentSum(arr);
+        maxSubArraySum(arr);
     }
 }
 
