@@ -3,7 +3,7 @@ public class EvenNumCheck {
         return number % 2 == 0;
     }
     public static void main(String[] args) {
-        int  number = 20;
+        int  number = 3;
         if (isEven(number)) {
             System.out.println(number + " is even.");
         } else {
